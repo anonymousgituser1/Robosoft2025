@@ -1,0 +1,730 @@
+#VRML_SIM R2023b utf8
+        PROTO SoftGripperLars_particle_0 [
+        field SFVec3f translationFinger1 0 0 0
+        field SFRotation rotationFinger1 0 0 1 0
+        field SFVec3f translationFinger2 0 0 0
+        field SFRotation rotationFinger2 0 0 1 0
+        field SFVec3f scale 1 1 1
+        field SFString name "SoftGripperLars_particle_0"
+        field SFString model ""
+        field SFString description ""
+        field SFString contactMaterial "soft"
+        field MFNode immersionProperties [ ]
+        field SFBool locked FALSE
+        field SFFloat radarCrossSection 0
+        field MFColor recognitionColors [ ]
+        field SFFloat translationStep 0.01
+        field SFFloat rotationStep 0.261799387
+        field SFVec3f linearVelocity 0 0 0
+        field SFVec3f angularVelocity 0 0 0
+        field SFBool selfCollision TRUE
+        ]
+        {
+        Solid {
+        translation 0 0 0
+        children [
+        
+
+        DEF Finger1 Solid {
+        translation IS translationFinger1
+        rotation IS rotationFinger1
+        scale IS scale
+        selfCollision IS selfCollision
+    
+
+        children [
+        DEF Part1 CadShape {
+        url [
+        "../CAD/CAD softgripper_slice1.obj"
+        ]
+        }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint1 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0191 -0.0085 0
+            springConstant 0.19
+            dampingConstant 0.00051057
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_1"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid1 Solid {
+            translation -0.0236 -0.0073 -0.0006
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice2.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint2 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0043 -0.0009 0
+            springConstant 0.176
+            dampingConstant 0.00040491
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_2"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid2 Solid {
+            translation -0.0087 -0.0002999999999999999 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice3.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint3 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0016 0
+            springConstant 0.311
+            dampingConstant 0.00121697
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_3"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid3 Solid {
+            translation -0.0087 -0.0005 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice4.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint4 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0013 0
+            springConstant 0.517
+            dampingConstant 0.00079145
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_4"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid4 Solid {
+            translation -0.0087 -0.0006 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice5.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint5 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0014 0
+            springConstant 0.103
+            dampingConstant 0.00022654
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_5"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid5 Solid {
+            translation -0.0084 -0.0009 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice6.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint6 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0012 0
+            springConstant 0.484
+            dampingConstant 0.00024779
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_6"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid6 Solid {
+            translation -0.0092 -0.001 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice7.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger1_Joint7 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0016 0
+            springConstant 0.401
+            dampingConstant 0.00028148
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger1_rot_z_7"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger1_Rigid7 Solid {
+            translation -0.009 -0.0034 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice8.obj"
+            ]
+            }
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice8.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.10207000000000001
+                }
+
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice7.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice6.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice5.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice4.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice3.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice2.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+]
+        name "finger1"
+        model IS model
+        description IS description
+        contactMaterial IS contactMaterial
+        immersionProperties IS immersionProperties
+            
+        boundingObject Mesh {
+        url [
+        "../CAD/CAD softgripper_slice1.obj"
+        ]
+        }
+
+        physics Physics {
+        mass 0.00207
+        }
+
+        locked IS locked
+        radarCrossSection IS radarCrossSection
+        recognitionColors IS recognitionColors
+        translationStep IS translationStep
+        rotationStep IS rotationStep
+        linearVelocity IS linearVelocity
+        angularVelocity IS angularVelocity
+        }
+
+        DEF Finger2 Solid {
+        translation IS translationFinger2
+        rotation IS rotationFinger2
+        scale IS scale
+        selfCollision IS selfCollision
+    
+
+        children [
+        DEF Part1 CadShape {
+        url [
+        "../CAD/CAD softgripper_slice1.obj"
+        ]
+        }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint1 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0191 -0.0085 0
+            springConstant 0.19
+            dampingConstant 0.00051057
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_1"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid1 Solid {
+            translation -0.0236 -0.0073 -0.0006
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice2.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint2 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0043 -0.0009 0
+            springConstant 0.176
+            dampingConstant 0.00040491
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_2"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid2 Solid {
+            translation -0.0087 -0.0002999999999999999 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice3.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint3 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0016 0
+            springConstant 0.311
+            dampingConstant 0.00121697
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_3"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid3 Solid {
+            translation -0.0087 -0.0005 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice4.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint4 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0013 0
+            springConstant 0.517
+            dampingConstant 0.00079145
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_4"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid4 Solid {
+            translation -0.0087 -0.0006 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice5.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint5 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0014 0
+            springConstant 0.103
+            dampingConstant 0.00022654
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_5"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid5 Solid {
+            translation -0.0084 -0.0009 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice6.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint6 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0012 0
+            springConstant 0.484
+            dampingConstant 0.00024779
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_6"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid6 Solid {
+            translation -0.0092 -0.001 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice7.obj"
+            ]
+            }
+
+            Hinge2Joint {
+            jointParameters DEF Finger2_Joint7 HingeJointParameters {
+            axis 0 0 1
+            anchor -0.0042 -0.0016 0
+            springConstant 0.401
+            dampingConstant 0.00028148
+            }
+            jointParameters2 JointParameters {
+            axis 0 1 0
+            springConstant 1
+            dampingConstant 1
+            }
+            device [
+            RotationalMotor {
+            name "finger2_rot_z_7"
+            }
+            PositionSensor{
+                
+            }
+            ]
+            endPoint DEF Finger2_Rigid7 Solid {
+            translation -0.009 -0.0034 0
+            rotation 0 1 0 0
+            contactMaterial "soft"
+            children [
+            CadShape {
+            url [
+            "../CAD/CAD softgripper_slice8.obj"
+            ]
+            }
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice8.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.10207000000000001
+                }
+
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice7.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice6.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice5.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice4.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice3.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+
+                ]
+                boundingObject Mesh {
+                url [
+                "../CAD/CAD softgripper_slice2.obj"
+                ]
+                }
+                physics Physics {
+                mass  0.00207
+                }
+                }
+                }
+                
+]
+        name "finger2"
+        model IS model
+        description IS description
+        contactMaterial IS contactMaterial
+        immersionProperties IS immersionProperties
+            
+        boundingObject Mesh {
+        url [
+        "../CAD/CAD softgripper_slice1.obj"
+        ]
+        }
+
+        physics Physics {
+        mass 0.00207
+        }
+
+        locked IS locked
+        radarCrossSection IS radarCrossSection
+        recognitionColors IS recognitionColors
+        translationStep IS translationStep
+        rotationStep IS rotationStep
+        linearVelocity IS linearVelocity
+        angularVelocity IS angularVelocity
+        }
+
+        ]
+	    name IS name
+        physics Physics {
+        mass 0.00207
+        }
+        }
+        }

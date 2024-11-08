@@ -1,0 +1,7 @@
+json
+numpy
+matplotlib
+seaborn
+pandas
+scipy
+opencv-python

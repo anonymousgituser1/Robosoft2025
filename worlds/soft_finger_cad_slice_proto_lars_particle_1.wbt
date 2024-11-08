@@ -1,0 +1,113 @@
+#VRML_SIM R2023b utf8
+
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/universal_robots/protos/UR3e.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+        EXTERNPROTO "../protos/SoftGripperLars_particle_1.proto"
+
+        WorldInfo {
+            basicTimeStep 1
+        }
+        Viewpoint {
+        orientation -0.20703596007392364 -0.03611434338673006 0.9776665410240929 3.520736132379194
+        position 1.1623241000432232 0.4225638912295447 0.3860349442881799
+        }
+        TexturedBackground {
+        }
+        TexturedBackgroundLight {
+        }
+        RectangleArena {
+        rotation 0 1 0 0
+        floorSize 5 5
+        }
+        DEF ur3e UR3e {
+        rotation 0 1 0 0
+        controller "controller_active"
+        controllerArgs [
+        "--experiment",
+        "downwards"
+        "--pressure",
+        "80000"
+        "--particle_index",
+        "1"
+         "--mass",
+        "0"
+        ]
+        toolSlot [
+            SoftGripperLars_particle_1 {
+            translationFinger1 0.04 0.012 0
+            rotationFinger1 0.7071066717789584 -0.7071068905930504 -1.229829809714868e-06 3.14159
+            translationFinger2 -0.04 0.012 0
+            rotationFinger2 0.7071066717789584 -0.7071068905930504 -1.229829809714868e-06 3.14159
+            }
+        ]
+        }
+
+        SpotLight {
+            ambientIntensity 1
+            beamWidth 1.570796
+            color 255 255 255
+            cutOffAngle 1.570796
+            direction 0 0 1
+            intensity 1
+            location 0.49200000000000005 0.28 0
+            on TRUE
+            radius 100
+            castShadows FALSE
+        } 
+
+        
+DEF Supervisor Robot {
+            name "box_A"
+            controller "supervisor_active"
+            controllerArgs [
+            "--particle_index",
+            "1"
+            ]
+            translation 0.542 0.295 0.046
+            contactMaterial "hard"
+            supervisor TRUE
+            children [
+                    DEF BOX_SHAPE Shape {
+                    appearance PBRAppearance {
+                        baseColor 1 0 0
+                        roughness 0.5
+                        metalness 0.5
+                        }
+                        geometry Box {
+                            size 0.05 0.09 0.093
+                        }
+                    }
+                
+                        TouchSensor {
+                            translation 0 0 0.0465
+                            contactMaterial "hard"
+                            children [
+                                DEF BUMPER Shape {
+                                appearance PBRAppearance {
+                                    baseColor 1 0.647059 0
+                                    roughness 1
+                                    metalness 0
+                                }
+                                geometry Box {
+                                    size 0.02 0.092 0.00005
+                                }
+                                }
+                            ]
+                            name "force"
+                            boundingObject USE BUMPER
+                            physics Physics {
+                                mass 10
+                            }
+                            type "force-3d"
+                            }
+        
+                ]
+                boundingObject USE BOX_SHAPE
+                physics Physics {
+                    mass 10
+                }
+                }
+                

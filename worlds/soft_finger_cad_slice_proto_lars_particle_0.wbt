@@ -1,0 +1,82 @@
+#VRML_SIM R2023b utf8
+
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/universal_robots/protos/UR3e.proto"
+        EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
+        EXTERNPROTO "../protos/SoftGripperLars_particle_0.proto"
+
+        WorldInfo {
+            basicTimeStep 32
+        }
+        Viewpoint {
+        orientation -0.20703596007392364 -0.03611434338673006 0.9776665410240929 3.520736132379194
+        position 1.1623241000432232 0.4225638912295447 0.3860349442881799
+        }
+        TexturedBackground {
+        }
+        TexturedBackgroundLight {
+        }
+        RectangleArena {
+        rotation 0 1 0 0
+        floorSize 5 5
+        }
+        DEF ur3e UR3e {
+        rotation 0 1 0 0
+        controller "passive_exp1"
+        controllerArgs [
+        "--experiment",
+        "downwards"
+        "--pressure",
+        "None"
+        "--particle_index",
+        "0"
+         "--mass",
+        "0.1"
+        ]
+        toolSlot [
+            SoftGripperLars_particle_0 {
+            translationFinger1 0.04 0.012 0
+            rotationFinger1 0.7071066717789584 -0.7071068905930504 -1.229829809714868e-06 3.14159
+            translationFinger2 -0.04 0.012 0
+            rotationFinger2 0.7071066717789584 -0.7071068905930504 -1.229829809714868e-06 3.14159
+            }
+        ]
+        }
+
+        SpotLight {
+            ambientIntensity 1
+            beamWidth 1.570796
+            color 255 255 255
+            cutOffAngle 1.570796
+            direction 0 0 1
+            intensity 1
+            location 0.49200000000000005 0.28 0
+            on TRUE
+            radius 100
+            castShadows FALSE
+        } 
+
+        
+
+        DEF Supervisor Robot {
+        name "supervisor3"
+        controller "supervisor_passive_exp1"
+        controllerArgs [
+        "--particle_index",
+        "0"
+        "--mass",
+        "0.1"
+        ]
+        supervisor TRUE
+        children [
+            DEF CAMERA Camera {
+                translation 0.342 0.28 0.10160999999999999
+                rotation 1 0 0 0
+                name "camera1"
+                width 2160
+                height 1080
+            }
+        ]
+        }

@@ -77,7 +77,7 @@ while supervisor.step(parameters["timestep"]) != -1:
                     file.close()
     if video:
         # Save each frame as an image
-        frame_filename = "/Users/lars/Documents/GitHub/Lars_Hof_RUG_BaIP_AY_23_24/python/images/video_0.04" + f"/{frame_counter}.png"
+        frame_filename = os.getcwd().replace("/supervisor_passive_exp1","/python/images/video_0.04" + f"/{frame_counter}.png")
         print(frame_filename)
         camera.getImage()
         camera.saveImage(frame_filename, 100)  # Save frame with 100% quality

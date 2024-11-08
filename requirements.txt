@@ -5,3 +5,11 @@ seaborn
 pandas
 scipy
 opencv-python
+math 
+datetime
+random
+pyswarms
+threading
+time
+sklearn
+subprocess

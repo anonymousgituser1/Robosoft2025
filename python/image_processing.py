@@ -1,4 +1,4 @@
-# Author: Lars Hof
+# Author: XXXX
 # Date August 2024
 
 import numpy as np
@@ -826,4 +826,4 @@ passive_dynamic_data = {"0.02" : [10, 0.35],
 # y_values = ast.literal_eval(y_values)
 # process_y_values(np.array(y_values))
 
-path = '/Users/lars/Documents/GitHub/Lars_Hof_RUG_BaIP_AY_23_24/python/images/downwards_0.06.png'
+# path =

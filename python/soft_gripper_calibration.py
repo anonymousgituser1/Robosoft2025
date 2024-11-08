@@ -1,5 +1,5 @@
 # This code does a calibration based on parameters selected by the optimizer
-# Author: Lars Hof
+# Author: XXXX
 # Date January 2024
 
 import image_processing # import python file with image processing functions

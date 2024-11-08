@@ -1,5 +1,5 @@
-#Author: Lars Hof
-#Date: January 2024
+#Author: XXXX
+#Date: July 2024
 
 import seaborn as sns
 from matplotlib import pyplot as plt

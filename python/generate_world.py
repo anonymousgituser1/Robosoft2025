@@ -1,6 +1,6 @@
 # This code generates a world file that can be used from webots
 # based on parameters that are selected in soft_gripper_calibration.py
-# Author: Lars Hof
+# Author: XXXX
 # Date January 2024
 
 from math import pi
@@ -44,7 +44,7 @@ def header_world_info(file, controller, experiment, timestep, pressure,mass,part
         EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
         EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/universal_robots/protos/UR3e.proto"
         EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidBox.proto"
-        EXTERNPROTO "../protos/SoftGripperLars'''+'_particle_'+str(particle_index)+'''.proto"
+        EXTERNPROTO "../protos/SoftGripper'''+'_particle_'+str(particle_index)+'''.proto"
 
         WorldInfo {
             basicTimeStep ''' + str(timestep) + '''
@@ -75,7 +75,7 @@ def header_world_info(file, controller, experiment, timestep, pressure,mass,part
         "''' + str(mass) +'''"
         ]
         toolSlot [
-            SoftGripperLars'''+'_particle_'+str(particle_index)+''' {
+            SoftGripper'''+'_particle_'+str(particle_index)+''' {
             translationFinger1 0.04 0.012 0
             rotationFinger1 ''' + str(rotation[experiment]) +'''
             translationFinger2 -0.04 0.012 0

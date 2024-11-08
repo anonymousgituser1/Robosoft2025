@@ -1,6 +1,6 @@
 # This code generates a proto file that can be used from webots
 # based on parameters that are selected in soft_gripper_calibration.py
-# Author: Lars Hof
+# Author: XXXX
 # Date January 2024
 
 import os
@@ -37,13 +37,13 @@ def get_names(finger, slice):
 #Writes the header to the proto file
 def header_proto(file,particle_index):
     file.write('''#VRML_SIM R2023b utf8
-        PROTO SoftGripperLars'''+'_particle_'+str(particle_index)+''' [
+        PROTO SoftGripper'''+'_particle_'+str(particle_index)+''' [
         field SFVec3f translationFinger1 0 0 0
         field SFRotation rotationFinger1 0 0 1 0
         field SFVec3f translationFinger2 0 0 0
         field SFRotation rotationFinger2 0 0 1 0
         field SFVec3f scale 1 1 1
-        field SFString name "SoftGripperLars'''+'_particle_'+str(particle_index)+'''"
+        field SFString name "SoftGripper'''+'_particle_'+str(particle_index)+'''"
         field SFString model ""
         field SFString description ""
         field SFString contactMaterial "soft"

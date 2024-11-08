@@ -1,7 +1,7 @@
 #Main file from which calibration experiments can be conducted
 #Please read all comments carefully to see where which 
 # calibration parameters can be set
-#Author: Lars Hof
+#Author: XXXX
 #Date: January 2024
 
 import json
@@ -251,8 +251,8 @@ elif OS == "Linux":
     # parameters["path_to_webots"] = ' '
 
 #Set paths to the parameters dictionary such that they can be used from other files.
-parameters["world_file"] = os.getcwd() + "/worlds/soft_finger_cad_slice_proto_lars.wbt"
-parameters["proto_file"] = os.getcwd() + "/protos/SoftGripperLars.proto"
+parameters["world_file"] = os.getcwd() + "/worlds/soft_finger_cad_slice_proto.wbt"
+parameters["proto_file"] = os.getcwd() + "/protos/SoftGripper.proto"
 parameters["screenshot_path"] = os.getcwd() + "/python/images/screenshot.png"
 parameters["screenshot_stimulated_path"] = os.getcwd() + "/python/images/screenshot_stimulated.png"
 parameters["screenshot_unstimulated_path"] = os.getcwd() + "/python/images/screenshot_unstimulated.png"
@@ -270,7 +270,8 @@ write_parameters(parameters)
 
 #Find the initial angles for damping experiment by subjecting the gripper to the mass used in the experiment
 if parameters["calibration"] == "damping":
-    data = "/Users/lars/Documents/GitHub/Lars_Hof_RUG_BaIP_AY_23_24/python/data/raw_data_downwards_passive_spring_2024-09-14.txt"
+
+    data = os.getcwd() + "/ython/data/raw_data_downwards_passive_spring_2024-09-14.txt"
     with open(data, 'r') as file:
         loaded_json_str = file.read()
     # Deserialize the JSON string to a dictionary

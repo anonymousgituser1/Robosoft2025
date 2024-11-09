@@ -6,7 +6,7 @@ Welcome to the Soft Gripper Calibration and Simulation repository, a project aut
 
 ## System Configuration
 
-The code development and calibration routines were performed on a computer located in the DTPA lab, with the following specifications:
+The code development and calibration routines were performed on a computer located in the XXXX, with the following specifications:
 - **Computer Model:** XXXX
 - **Serial Number:** CZC929D5J6
 - **Processor:** Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz

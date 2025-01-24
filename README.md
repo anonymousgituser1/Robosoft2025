@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Soft Gripper Calibration and Simulation repository, a project authored by XXXX in XXXX. This project focuses on conducting calibration experiments on a soft gripper with the main objective of optimizing and simulating gripper performance through careful parameter tuning.
+Welcome to the Soft Gripper Calibration and Simulation repository, a project authored by Lars Hof in 2024. This project focuses on conducting calibration experiments on a soft gripper with the main objective of optimizing and simulating gripper performance through careful parameter tuning.
 
 ## System Configuration
 

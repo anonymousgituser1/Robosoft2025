@@ -1,4 +1,4 @@
-#Author: XXXX
+#Author: Lars Hof
 #Date: July 2024
 
 import seaborn as sns

@@ -1,7 +1,7 @@
 #Main file from which calibration experiments can be conducted
 #Please read all comments carefully to see where which 
 # calibration parameters can be set
-#Author: XXXX
+#Author: Lars Hof
 #Date: January 2024
 
 import json

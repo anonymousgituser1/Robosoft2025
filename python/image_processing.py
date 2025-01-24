@@ -1,4 +1,4 @@
-# Author: XXXX
+# Author: Lars Hof
 # Date August 2024
 
 import numpy as np

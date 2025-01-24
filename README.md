@@ -21,7 +21,7 @@ Let's start by cloning the git:
 
 ```bash
 cd /DESIRED_LOCATION
-git clone git@github.com:anonymousgituser1/Robosoft2025.git
+git clone git@github.com:larshof97/Robosoft2025.git
 ```
 
 To run this project locally, ensure you have the required Python packages installed. You can install them by running the following command in your terminal:

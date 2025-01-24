@@ -1,6 +1,6 @@
 # This code generates a world file that can be used from webots
 # based on parameters that are selected in soft_gripper_calibration.py
-# Author: XXXX
+# Author: Lars Hof
 # Date January 2024
 
 from math import pi

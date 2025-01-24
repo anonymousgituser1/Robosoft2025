@@ -3,7 +3,7 @@
 # Plots PSO results.
 # For plotting image processing steps or validation, please go to image_processing.py
 
-#Author: XXXX
+#Author: Lars Hof
 #Date: January 2024
 
 import seaborn as sns
